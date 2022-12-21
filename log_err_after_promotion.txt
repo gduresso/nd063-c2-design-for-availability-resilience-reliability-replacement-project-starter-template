@@ -1,0 +1,40 @@
+MySQL [(none)]> use udacity 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> select * from course;
++-----------+----------------------+
+| course_id | course_name          |
++-----------+----------------------+
+| Intro 101 | introduction to java |
++-----------+----------------------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]> insert into course('102 intro to py', 'py102');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''102 intro to py', 'py102')' at line 1
+MySQL [udacity]> insert into coursevalues ('102 intro to py', 'py102');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''102 intro to py', 'py102')' at line 1
+MySQL [udacity]> insert into course values('102 intro to py', 'py102');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+MySQL [udacity]> 
+MySQL [udacity]> 
+MySQL [udacity]> 
+MySQL [udacity]> insert into course values('102 intro to py', 'py102');
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    9
+Current database: udacity
+
+Query OK, 1 row affected (0.02 sec)
+
+MySQL [udacity]> select * from course;
++-----------------+----------------------+
+| course_id       | course_name          |
++-----------------+----------------------+
+| Intro 101       | introduction to java |
+| 102 intro to py | py102                |
++-----------------+----------------------+
+2 rows in set (0.00 sec)
+
+MySQL [udacity]> 
