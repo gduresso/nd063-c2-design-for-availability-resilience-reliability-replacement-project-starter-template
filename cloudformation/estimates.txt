@@ -1,0 +1,8 @@
+- Minimum RTO for a single AZ outage : 60-120 secs
+    The minimum RTO for single AZ outage can range from a minute to two depending on data transacton at the time. It should be considered that larger transaction could take longet time of revorvery.
+- Minimum RTO for a single region outage : 
+    -This depends on the time the alarm triggered to the time the issue is remediated with the involvement of support team.
+- Minimum RPO for a single AZ outage 
+    - The minimum RPO is the data lost during the issue. this can vary depending on the scheduled backup. Since the recovery happens in the same region between AZs, it takes almost not data lose.
+- Minimum RPO for a single region outage : 
+    - This is dependent on the replica and assuming the replica is automatic, the RPO will be ~zero.
